@@ -2,8 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 export default function Button({ children, disabled, type, onclick }) {
-    // const className = `bg-yellow-400 uppercase text-stone-800 py-3 px-4 inline-block rounded-lg font-semibold
-    //       hover:bg-yellow-600 transition-colors duration-300 focus:outline-none md:px-6 md:py-4`
+
     const navigate = useNavigate()
 
 
@@ -18,8 +17,8 @@ export default function Button({ children, disabled, type, onclick }) {
           hover:bg-yellow-600 transition-colors duration-300 focus:outline-none md:px-6 md:py-4`
     }
     return (
-    
-        <button  onClick={onclick} disabled={disabled} className={styles[type]}>{
+
+        <button onClick={onclick} disabled={disabled} className={styles[type]}>{
             children
         }
         </button>

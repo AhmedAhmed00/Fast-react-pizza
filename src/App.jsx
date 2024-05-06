@@ -9,7 +9,6 @@ import AppLayout from "./features/ui/AppLayout";
 import { Provider } from "react-redux";
 import store from './features/store';
 function App() {
-  // array of objects each object is a route
   const routes = createBrowserRouter([
     {
       element: <AppLayout />, errorElement: <Error />, children: [
@@ -25,7 +24,6 @@ function App() {
   return <>
     <Provider store={store} >
       <RouterProvider router={routes} />
-
     </Provider >
 
   </>

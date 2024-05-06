@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { formatCurrency } from './../utils/helpers';
 import { fetchAddress } from '../user/userSlice';
 
-// https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
     str
@@ -50,7 +49,7 @@ function CreateOrder() {
   const [withPriority, setWithPriority] = useState(false)
   const priorityPrice = withPriority ? totalCartPrice * 0.2 : 0
   const totalPrice = totalCartPrice + priorityPrice
-  const cart = fakeCart;  
+  const cart = fakeCart;
   const {
     username,
     status: addressStatus,
